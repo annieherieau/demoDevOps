@@ -12,7 +12,7 @@ public class DefaultController {
     public Info getInfo(){
         Info info = Info.builder()
                 .name("Votre nom")
-                .email("votreMail@campus-eni.fr")
+                .email("votreMail@campus-xyz.fr")
                 .Date(LocalDate.now())
                 .build();
         return info;
