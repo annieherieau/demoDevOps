@@ -1,4 +1,5 @@
-FROM openjdk:17
-COPY target/*.jar app-devops.jar 
+FROM eclipse-temurin:17-jdk
+WORKDIR /app
+COPY build/libs/*.jar app-devops.jar
 EXPOSE 80
-CMD ["java", "-jar", "app-devops.jar", "--server.port=80"]
+ENTRYPOINT ["java", "-jar", "app-devops.jar"]
